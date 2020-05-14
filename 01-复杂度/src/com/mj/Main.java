@@ -15,6 +15,8 @@ public class Main {
             return n;
         }
         return fib1(n -1) + fib1(n -2);
+
+        // 这个方法复杂度为：O(2^n)
     }
 
     // 方法二：相加法
@@ -37,6 +39,8 @@ public class Main {
         }
 
         return second;
+
+        // 这个方法复杂度为：O(n)
     }
 
 
