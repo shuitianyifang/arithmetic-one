@@ -60,8 +60,10 @@ public class MyArrayList {
     /**
      * 添加元素到尾部
      */
+    // 规律，就是往 size 值得那个位置放东西
     public void add(int element){
-
+        elements[size] = element;
+        size++;
     }
 
     /**
@@ -110,6 +112,29 @@ public class MyArrayList {
             }
         }
         return ELEMENT_NOT_FOUND;
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder string = new StringBuilder();
+        string.append("size=").append(size).append(", [");
+
+        for (int i = 0; i < size; i++) {
+            if(i != 0 ){
+                string.append(", ");
+            }
+
+            string.append(elements[i]);
+
+            // if(i != size - 1 ){
+            //     string.append(", ");
+            // }
+        }
+
+        string.append("]");
+
+        return string.toString();
     }
 
 }
